@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{title}}</title>
+
+        <style>
+
+        body{
+            background-color: black;
+        }
+
+        .main{
+            width: 1000px;
+            background-color: navy;
+            color: white;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .list{
+            width: 1000px;
+            background-color: cyan;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+
+        }
+
+        .table{
+            width: 1000px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 20px;
+
+        }
+        
+        </style>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      
+        <div class="main"> 
+        <h1>{{body}}</h1>
+    </div>
+    <br/>
+
+        <div class="list">
+        {% for n in list %}
+       
+         <h3>({{forloop.counter}}) {{n}}</h3>
+        {% endfor %}
+        </div>
+        <br/>
+    
+        <div class="table">
+        <table border="5" cellpadding="10">
+            <tr>
+                <th>S.N</th>
+                <th>Full Name</th>
+                <th>Phone Number</th>
+            </tr>
+
+            {% for a in details %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{a.Name}}</td>
+                <td>{{a.Phone}}</td>
+            </tr>
+            {% endfor %}
+        </dv>
+                
+
+        </table>
+        
+    
+        <script src="" async defer></script>
+    </body>
+</html>
