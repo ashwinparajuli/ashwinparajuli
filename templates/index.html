@@ -42,6 +42,14 @@
 
         }
         
+        .loop1{
+            text-align: left;
+        }
+
+        .loop2{
+            text-align: left;
+        }
+
         </style>
 
         <meta name="description" content="">
@@ -71,18 +79,35 @@
                 <th>Phone Number</th>
             </tr>
 
-            {% for a in details %}
+            {% for n in details %}
             <tr>
                 <td>{{forloop.counter}}</td>
-                <td>{{a.Name}}</td>
-                <td>{{a.Phone}}</td>
+                <td>{{n.Name}}</td>
+                <td>{{n.Phone}}</td>
             </tr>
             {% endfor %}
         </dv>
+        
+    </table>
+    <br/>
                 
 
-        </table>
-        
+{% if numbers|length > 0 %}
+
+   {% for n in numbers %}
+    <div class="loop1">
+        {{n}} 
+    </div>
+
+{% endfor %}
+
+{% else %}
+    No data found!
+{% endif %}
+
+
+    
+
         <script src="" async defer></script>
     </body>
 </html>
