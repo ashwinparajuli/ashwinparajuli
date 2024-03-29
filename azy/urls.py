@@ -21,7 +21,7 @@ from azy import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homePage),
-    path('home/', views.homePage),
+    path('home/', views.homePage,name='home'),
     path('about-us/', views.aboutUs,name='about'),
     path('contact/', views.contact),
    
