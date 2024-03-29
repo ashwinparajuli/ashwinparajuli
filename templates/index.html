@@ -1,113 +1,44 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{title}}</title>
+<title>Ashwin</title>
+<link rel="stylesheet" href="/static/styles.css">
 
-        <style>
-
-        body{
-            background-color: black;
-        }
-
-        .main{
-            width: 1000px;
-            background-color: navy;
-            color: white;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .list{
-            width: 1000px;
-            background-color: cyan;
-            color: white;
-            padding: 20px;
-            font-size: 20px;
-
-        }
-
-        .table{
-            width: 1000px;
-            background-color: white;
-            color: black;
-            text-align: center;
-            padding: 20px;
-
-        }
-        
-        .loop1{
-            text-align: left;
-        }
-
-        .loop2{
-            text-align: left;
-        }
-
-        </style>
-
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-      
-        <div class="main"> 
-        <h1>{{body}}</h1>
-    </div>
-    <br/>
-
-        <div class="list">
-        {% for n in list %}
-       
-         <h3>({{forloop.counter}}) {{n}}</h3>
-        {% endfor %}
-        </div>
-        <br/>
+{%  extends 'base.html' %}
+ 
+ {% block content %}
     
-        <div class="table">
-        <table border="5" cellpadding="10">
-            <tr>
-                <th>S.N</th>
-                <th>Full Name</th>
-                <th>Phone Number</th>
-            </tr>
+    <main>
+        <section id="home">
+            <h2>Welcome to our Farm!</h2>
+            <p>{% lorem 1 b random %}</p>
+        </section>
 
-            {% for n in details %}
-            <tr>
-                <td>{{forloop.counter}}</td>
-                <td>{{n.Name}}</td>
-                <td>{{n.Phone}}</td>
-            </tr>
-            {% endfor %}
-        </dv>
-        
-    </table>
-    <br/>
-                
+        <section id="about">
+            <h2>About Us</h2>
+           <p>{% lorem 10 b random %}</p>
+        </section>
 
-{% if numbers|length > 0 %}
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </section>
 
-   {% for n in numbers %}
-    <div class="loop1">
-        {{n}} 
-    </div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
 
-{% endfor %}
+    <script src="/static/script.js"></script>
 
-{% else %}
-    No data found!
-{% endif %}
-
-
-    
-
-        <script src="" async defer></script>
-    </body>
-</html>
+    {% endblock %}
