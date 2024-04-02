@@ -23,7 +23,9 @@ urlpatterns = [
     path('', views.homePage),
     path('home/', views.homePage,name='home'),
     path('about-us/', views.aboutUs,name='about'),
-    path('contact/', views.contact),
-   
-    path('services/', views.services)
+    path('user-form/', views.userForm,name='form'),
+    path('submit-form/', views.submitForm,name='submitform'),
+    #path('/#services/', views.homePage,name='services'),
+    #path('/#contact/', views.homePage,name='contact'),
+    path('calculator/', views.calculator,name='calculator'),
 ]

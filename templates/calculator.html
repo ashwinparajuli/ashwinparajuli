@@ -1,0 +1,45 @@
+<title>Calculator</title>
+<link rel="stylesheet" href="/static/styles.css">
+{% extends 'base/base.html' %}
+    
+{% block content %}
+    
+    <main>
+        
+    <section class="form">
+        <form><h2>Calculator</h2></form>  
+    </section>
+
+<div class="row">
+    <div class="col-12">
+        <form method="post"> 
+            {% csrf_token %}
+            <label>Value 1</label></br>
+            <input type="text" value="{{n1}}" name="num1" class="form-control"/><p>
+                <label>Select OPR...</label></br>
+            <select name="opr" value="{{opr}}" class="form-control"/> 
+            
+                <option Value="+">+</option>
+                <option Value="-">-</option>
+                <option Value="*">*</option>
+                <option Value="/">/</option>
+            </select><p>    
+            <label>Value 2</label></br>
+            <input type="text" value="{{n2}}" name="num2" class="form-control"/><p>
+          
+            <button type"submit">Calculate</button><p>
+
+            <label>Output</label></br>
+            <input type="text" value="{{c}}" class="form-control"/><p>
+        </form>
+    </div>
+</div>
+
+</main>
+
+
+{% endblock content %}
+
+
+
+

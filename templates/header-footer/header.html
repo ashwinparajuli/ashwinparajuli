@@ -17,13 +17,22 @@
     <li class="{% if request.path == url %} active {% endif %}">
         <a href="{{url}}">About</a></li>
 
-                
-            <li>
-                <a href="#services">Services</a></li>
+{% url 'form' as url %}
+    <li class="{% if request.path == url %} active {% endif %}">
+        <a href="{{url}}">User Form</a></li>
 
-            <li>
-                <a href="#contact">Contact</a></li>
+{% url 'calculator' as url %}
+    <li class="{% if request.path == url %} active {% endif %}">
+        <a href="{{url}}">Calculator</a></li>
+    </br></br>
 
+
+<li>
+        <a href="/#services">Service</a></li>
+
+<li>
+        <a href="/#contact">Contact</a></li>
+           
         </ul>
     </nav>
 </header>

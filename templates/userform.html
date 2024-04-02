@@ -1,0 +1,46 @@
+<title>User Data</title>
+<link rel="stylesheet" href="/static/styles.css">
+{% extends 'base/base.html' %}
+    
+{% block content %}
+    
+    <main>
+        
+    <section class="form">
+        <form><h2>User Data</h2></form>  
+    </section>
+
+<div class="row">
+    <div class="col-12">
+        <form method="post" action="{% url 'submitform' %}"> 
+            {% csrf_token %}
+            {{form|linebreaks}}
+            <!--<div>
+                <label for="">Value1</label>
+                <input type="text" name="num1" value="{{n1}}" class="form-control"/>
+            </div></br>
+            <div>
+                <label for="">Value2</label>
+                <input type="text" name="num2" value="{{n2}}" class="form-control"/>
+            </div>--></br>
+            <div>
+                <button type="submit">Save</button>
+            </div></br>
+        <!--
+            <div>
+                <label for="">Output</label>
+                <input type="text" value="{{output}}"/>
+            </div>
+        -->
+        </form>
+    </div>
+</div>
+
+</main>
+
+
+{% endblock content %}
+
+
+
+

@@ -12,11 +12,9 @@ header {
 }
 
 header .active a{
-    background-color: black;
+    background-color: orangered;
     
 }
-
-
 
 
 nav ul {
@@ -38,14 +36,42 @@ nav ul li a {
    
 }
 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+   
+}
+
 main {
     padding: 20px;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 20px;   
 }
 
+
+
+.form{
+    text-align: center;
+}
+
+.about{
+    text-align: center;
+}
+
+main .about{
+    text-align: center;
+}
+
+.form-control{
+    width: 50%;
+    border: green;
+    border-style: dotted;
+   
+}
+
+    
 footer {
     background-color: #333;
     color: #fff;
